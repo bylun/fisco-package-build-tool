@@ -200,19 +200,49 @@ nodeactioninfo_192_168_1_153_1.json
 ./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_153_0.json
 ./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_153_1.json 
 
-    ===================================================================
-    node.json=file:/root/test/node_action_info_dir/nodeactioninfo_192_168_1_151_0.json
-    NodeIdsLength= 1
-    ----------node 0---------
-    id=d418e60ebc87c1b982e8571b46367a3f99bc798f942bc36bfa558db481111aaee3b463d13594758384b6407520b43ce9e7e95dd01cd40da08b85ff4277c447ae
-    ip=192.168.1.151
-    port=30304
-    category=1
-    desc=192.168.1.151_0
-    CAhash=
-    agencyinfo=agent_0
-    blocknumber=1
-    Idx=0
+===================================================================
+node.json=file:/fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_153_1.json
+NodeIdsLength= 4
+----------node 0---------
+id=5eb559f3dd27e0480d611d55a6ba4ee9b94267c33d107c9368a672c7da9ffd4b70e0a6423f3c7fe44e43d3c4969017bcad0b6dc5c46690ce3723268613759f00
+ip=192.168.1.151
+port=30304
+category=1
+desc=192.168.1.151_0
+CAhash=
+agencyinfo=agent_0
+blocknumber=1
+Idx=0
+----------node 1---------
+id=3e4108e7a18b615846152c073c8f40cd078ce78432dad982f91e8d8cf4acfa863ad272f39bb2334c9de77e97d6951f1e74b7d58e99ce679f83fb1ff3e5230384
+ip=192.168.1.151
+port=30305
+category=1
+desc=192.168.1.151_1
+CAhash=
+agencyinfo=agent_0
+blocknumber=1
+Idx=1
+----------node 2---------
+id=ece908e7b9e94969717820967047861e82514a39c53e15518267bc8dcf34b415f8c23d48236ebbeac6bb316447144e877ccaf1eb6159610c884be74e9f127487
+ip=192.168.1.153
+port=30304
+category=1
+desc=192.168.1.153_0
+CAhash=
+agencyinfo=agent_1
+blocknumber=1
+Idx=2
+----------node 3---------
+id=076d6e5e7830ef4cc31f10524835af608bb725c41366cf88ebcabc5b523e90719c03a2367138d0d912065b885e50f88c5b892fc348acd918ad129801e341c1de
+ip=192.168.1.153
+port=30305
+category=1
+desc=192.168.1.153_1
+CAhash=
+agencyinfo=agent_1
+blocknumber=1
+Idx=3
   ```
 
 * 每个节点的节点信息文件的文件名都包含了ip信息和index信息, 用于区分, 例如`nodeactioninfo_172_20_245_42_0.json`, 最后的那个"0"字符就是表示这是172_20_245_42这台服务器上面的第0个节点node0的节点信息文件。
