@@ -133,7 +133,7 @@ nodeactioninfo_192_168_1_153_1.json
 
 * install_node.sh脚本用来生成本机的数据目录、启动、停止脚本, 每个目录下都存在。
 
-#### 5.4 
+#### 5.4 注意事项
 - [x]  1. 执行./generate_installation_packages.sh build如果出错, 解决问题重新执行之前, 需要将错误执行生成的build目录删除, 才能重新执行。
 - [x]  2. 生成的安装包最好不要部署在build目录内, 部署在build目录时, 启动的fisco-bcos进程也会在build目录下启动, 会导致build目录无法删除, 下次想重新生成其他安装包时会有问题。
 
