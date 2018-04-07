@@ -124,9 +124,10 @@ dependencies  fisco-bcos  install_node.sh
 * node_manager.sh用来执行节点信息注册、取消、查询功能, 即操作节点管理合约。  
 * node_action_info_dir目录保存了本次创建的所有节点的node信息(包括创世节点与非创世节点)。按照示例中的配置node_action_info_dir目录下的内容为:  
 ```shell
-nodeactioninfo_172.20.245.42_0.json  nodeactioninfo_172.20.245.42_1.json 
-nodeactioninfo_172.20.245.43_0.json  nodeactioninfo_172.20.245.43_1.json 
-nodeactioninfo_172.20.245.44_0.json  nodeactioninfo_172.20.245.44_1.json 
+nodeactioninfo_192_168_1_151_0.json
+nodeactioninfo_192_168_1_151_1.json
+nodeactioninfo_192_168_1_153_0.json
+nodeactioninfo_192_168_1_153_1.json 
 ```
 * 节点node文件名的格式为nodeactioninfo_IP_IDX, IDX从0开始, 表示该服务器生成的第几个节点。
 
