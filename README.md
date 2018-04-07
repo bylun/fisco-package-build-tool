@@ -195,16 +195,20 @@ nodeactioninfo_192_168_1_153_1.json
   例如,如果需要添加这台服务器上的第0个节点：
 
   ```sh
-  $ ./node_manager.sh registerNode `pwd`/node_action_info_dir/nodeactioninfo_172_20_245_42_0.json 
+./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_151_0.json
+./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_151_1.json
+./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_153_0.json
+./node_manager.sh registerNode /fisco-bcos-nodes/fisco_bcos_nodes_installation_package/node_action_info_dir/nodeactioninfo_192_168_1_153_1.json 
+
     ===================================================================
-    node.json=file:/root/test/node_action_info_dir/nodeactioninfo_172_20_245_42_0.json
+    node.json=file:/root/test/node_action_info_dir/nodeactioninfo_192_168_1_151_0.json
     NodeIdsLength= 1
     ----------node 0---------
     id=d418e60ebc87c1b982e8571b46367a3f99bc798f942bc36bfa558db481111aaee3b463d13594758384b6407520b43ce9e7e95dd01cd40da08b85ff4277c447ae
-    ip=172.20.245.42
+    ip=192.168.1.151
     port=30304
     category=1
-    desc=172.20.245.42_0
+    desc=192.168.1.151_0
     CAhash=
     agencyinfo=agent_0
     blocknumber=1
