@@ -34,8 +34,8 @@ sudo yum -y install git
 sudo yum -y install dos2unix
 sudo yum -y install java 
 sudo yum -y install lsof
-
-# 5. <a name="buildblockchain" id="buildblockchain">从零开始搭建区块链步骤</a>
+```
+# 5. 从零开始搭建区块链步骤</a>
 #### 5.1 准备
 * 获取fisco-package-build-tool工具包  
 git clone https://github.com/FISCO-BCOS/fisco-package-build-tool.git  
