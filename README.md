@@ -251,6 +251,64 @@ Idx=3
 在创世节点环境中，找到node_manager.sh，执行 ：
 
 ```$ ./node_manager.sh all```
+```
+四月 07, 2018 11:13:50 下午 org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e6d1014: startup date [Sat Apr 07 23:13:50 CST 2018]; root of context hierarchy
+四月 07, 2018 11:13:50 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+四月 07, 2018 11:13:50 下午 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor initialize
+信息: Initializing ExecutorService  'pool'
+
+命令输入参考如下！ 
+Usage: java  -cp 'conf/:apps/*:lib/*'  org.bcos.contract.tools.SystemContractTools SystemProxy  
+Usage: java  -cp 'conf/:apps/*:lib/*'  org.bcos.contract.tools.SystemContractTools AuthorityFilter  
+Usage: java  -cp 'conf/:apps/*:lib/*'  org.bcos.contract.tools.SystemContractTools NodeAction all|registerNode|cancelNode 
+Usage: java  -cp 'conf/:apps/*:lib/*'  org.bcos.contract.tools.SystemContractTools CAAction all|update|updateStatus 
+Usage: java  -cp 'conf/:apps/*:lib/*'  org.bcos.contract.tools.SystemContractTools ConfigAction get|set 
+
+===================================================================
+NodeIdsLength= 4
+----------node 0---------
+id=5eb559f3dd27e0480d611d55a6ba4ee9b94267c33d107c9368a672c7da9ffd4b70e0a6423f3c7fe44e43d3c4969017bcad0b6dc5c46690ce3723268613759f00
+ip=192.168.1.151
+port=30304
+category=1
+desc=192.168.1.151_0
+CAhash=
+agencyinfo=agent_0
+blocknumber=1
+Idx=0
+----------node 1---------
+id=3e4108e7a18b615846152c073c8f40cd078ce78432dad982f91e8d8cf4acfa863ad272f39bb2334c9de77e97d6951f1e74b7d58e99ce679f83fb1ff3e5230384
+ip=192.168.1.151
+port=30305
+category=1
+desc=192.168.1.151_1
+CAhash=
+agencyinfo=agent_0
+blocknumber=1
+Idx=1
+----------node 2---------
+id=ece908e7b9e94969717820967047861e82514a39c53e15518267bc8dcf34b415f8c23d48236ebbeac6bb316447144e877ccaf1eb6159610c884be74e9f127487
+ip=192.168.1.153
+port=30304
+category=1
+desc=192.168.1.153_0
+CAhash=
+agencyinfo=agent_1
+blocknumber=1
+Idx=2
+----------node 3---------
+id=076d6e5e7830ef4cc31f10524835af608bb725c41366cf88ebcabc5b523e90719c03a2367138d0d912065b885e50f88c5b892fc348acd918ad129801e341c1de
+ip=192.168.1.153
+port=30305
+category=1
+desc=192.168.1.153_1
+CAhash=
+agencyinfo=agent_1
+blocknumber=1
+Idx=3
+```
 
 #### 6.6 部署成功
 可以通过发送交易是否成功判断链是否搭建成功。 
