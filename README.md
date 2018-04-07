@@ -215,7 +215,8 @@ nodeactioninfo_192_168_1_153_1.json
 * 建议每个节点在启动之后, 然后再执行node_manager.sh进行添加。
 #### 6.5 查看入网节点
 在创世节点环境中，找到node_manager.sh，执行 ：
-$ ./node_manager.sh all
+
+```$ ./node_manager.sh all```
 
 #### 6.6 部署成功
 可以通过发送交易是否成功判断链是否搭建成功。 
