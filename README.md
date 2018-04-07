@@ -35,15 +35,6 @@ sudo yum -y install dos2unix
 sudo yum -y install java 
 sudo yum -y install lsof
 
-[Ubuntu Install]
-sudo apt install git
-sudo apt install lsof
-sudo apt install openjdk-8-jre-headless
-sudo apt install tofrodos
-ln -s /usr/bin/todos /usr/bin/unix2dos 
-ln -s /usr/bin/fromdos /usr/bin/dos2unix 
-```
-
 # 5. <a name="buildblockchain" id="buildblockchain">从零开始搭建区块链步骤</a>
 #### 5.1 准备
 * 获取fisco-package-build-tool工具包  
@@ -74,25 +65,13 @@ RPC_PORT_FOR_TEMP_NODE=8545
 CHANNEL_PORT_FOR_TEMP_NODE=8821
 RPC_SSL_PORT_FOR_TEMP_NODE=18545
 
-# config for the blockchain node
-# the first node is the genesis node
-# field 0 : external_ip
-# field 1 : internal_ip
-# field 2 : node number on this host
-# field 3 : identity type
-# field 4 : crypto mode
-# field 5 : ssl 
-# field 6 : super key
-# filed 7 : agency info
 
-weth_host_0=("172.20.245.42" "0.0.0.0" "2" "1" "1" "0" "d4f2ba36f0434c0a8c1d01b9df1c2bce" "agent_0")
-weth_host_1=("172.20.245.43" "0.0.0.0" "2" "1" "1" "0" "d4f2ba36f0434c0a8c1d01b9df1c2bce" "agent_1")
-weth_host_2=("172.20.245.44" "0.0.0.0" "2" "1" "1" "0" "d4f2ba36f0434c0a8c1d01b9df1c2bce" "agent_2")
+weth_host_0=("192.168.1.151" "0.0.0.0" "2" "1" "1" "0" "d4f2ba36f0434c0a8c1d01b9df1c2bce" "agent_0")
+weth_host_1=("192.168.1.153" "0.0.0.0" "2" "1" "1" "0" "d4f2ba36f0434c0a8c1d01b9df1c2bce" "agent_1")
 
 MAIN_ARRAY=(
 weth_host_0[@]
 weth_host_1[@]
-weth_host_2[@]
 )
 ```
 
@@ -128,9 +107,8 @@ $ ./generate_installation_packages.sh build
 * 执行完脚本以后在当前目录会自动生成**build**目录, 在build目录下生成每台机器的安装包, 生成的目录名称格式为："internal_ip_with_external_ip_installation_package"。按照示例配置, 会生成下面的四个文件：
 ```
 ls build/
-172.20.245.44_with_0.0.0.0_installation_package
-172.20.245.43_with_0.0.0.0_installation_package
-172.20.245.42_with_0.0.0.0_genesis_installation_package
+192.168.1.151_with_0.0.0.0_genesis_installation_package
+192.168.1.153_with_0.0.0.0_installation_package
 temp
 ```
 其中temp目录不需要理会, 其余的几个包分别为对应服务器上节点的安装包。  
@@ -164,7 +142,7 @@ nodeactioninfo_172.20.245.44_0.json  nodeactioninfo_172.20.245.44_1.json
 # <a name="deploy_genesis_host_node" id="deploy_genesis_host_node">6. 部署节点</a>
 #### 6.1 准备
 * **需要先部署创世节点的安装包，再部署非创世节点的安装包。**
-  创世节点的安装包文件包含了“genesis”字样，例如：172.20.245.42\_with\_0.0.0.0\_<span style="color:red">genesis</span>\_installation_package
+  创世节点的安装包文件包含了“genesis”字样，例如：192.168.1.151\_with\_0.0.0.0\_<span style="color:red">genesis</span>\_installation_package
 * 创世节点和非创世节点的部署步骤完全一致。只是非创世节点需要多做一步“添加节点”的操作(参考FISCO-BCOS使用手册[[多节点组网]](https://github.com/FISCO-BCOS/FISCO-BCOS/tree/master/doc/manual#第六章-多节点组网))。
 
 #### 6.2 执行安装脚本
@@ -206,8 +184,10 @@ $ ./start_nodeN.sh
   
 ```
 $ ls
-nodeactioninfo_172_20_245_42_0.json  nodeactioninfo_172_20_245_43_0.json  nodeactioninfo_172_20_245_44_0.json
-nodeactioninfo_172_20_245_42_1.json  nodeactioninfo_172_20_245_43_1.json  nodeactioninfo_172_20_245_44_1.json
+nodeactioninfo_192_168_1_151_0.json
+nodeactioninfo_192_168_1_151_1.json
+nodeactioninfo_192_168_1_153_0.json
+nodeactioninfo_192_168_1_153_1.json
 ```
 
   使用`node_manager.sh`脚本进行添加  
